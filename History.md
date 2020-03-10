@@ -1,7 +1,20 @@
 ## Master
 
 * Features
-  * Your feature goes here (#Github Number)
+  * Add pumactl `thread-backtraces` command to print thread backtraces (#2053)
+  * Configuration: `environment` is read from `RAILS_ENV`, if `RACK_ENV` can't be found (#2022)
+  * Do not set user_config to quiet by default to allow for file config (#2074)
+  * `GC.compact` is called before fork if available (#2093)
+  * Add `requests_count` to workers stats. (#2106)
+  * Increases maximum URI path length from 2048 to 8196 bytes (#2167)
+
+* Deprecations, Removals and Breaking API Changes
+  * `Puma.stats` now returns a Hash instead of a JSON string (#2086)
+  * `--control` has been removed. Use `--control-url` (#1487)
+  * `worker_directory` has been removed. Use `directory`.
+  * `tcp_mode` has been removed without replacement. (#2169)
+  * Changed #connected_port to #connected_ports (#2076)
+  * Increase max URI path length to 8196, closes #2134 (#2168)
 
 * Bugfixes
   * Your bugfix goes here (#Github Number)
